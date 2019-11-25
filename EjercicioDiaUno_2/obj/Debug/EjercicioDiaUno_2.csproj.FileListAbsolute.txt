@@ -1,0 +1,5 @@
+C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioNumeroDos\bin\Debug\EjercicioNumeroDos.exe.config
+C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioNumeroDos\bin\Debug\EjercicioNumeroDos.exe
+C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioNumeroDos\bin\Debug\EjercicioNumeroDos.pdb
+C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioNumeroDos\obj\Debug\EjercicioNumeroDos.exe
+C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioNumeroDos\obj\Debug\EjercicioNumeroDos.pdb

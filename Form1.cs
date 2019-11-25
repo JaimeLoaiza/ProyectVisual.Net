@@ -16,5 +16,15 @@ namespace ProyectVisual.Net
         {
             InitializeComponent();
         }
+
+        private void btnanswer_Click(object sender, EventArgs e)
+        {
+            txtanswer.Text = (Convert.ToInt32(txtnumber1.Text) + Convert.ToInt32(txtnumber2.Text)).ToString();
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
