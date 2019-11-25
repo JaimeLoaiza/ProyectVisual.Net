@@ -1,2 +1,0 @@
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioDiaUno\obj\Debug\EjercicioDiaUno.exe
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\EjercicioDiaUno\obj\Debug\EjercicioDiaUno.pdb
