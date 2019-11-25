@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosDiaUno_1", "EjercicioDiaUno\EjerciciosDiaUno_1.csproj", "{D7FD1328-3E2B-4E1A-8945-0FD812C58A15}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosDiaUno_2", "EjercicioNumeroDos\EjerciciosDiaUno_2.csproj", "{D06BFAF7-D9DB-4244-992E-5745679419DE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosDiaUno_3", "EjercicioDiaUno_3\EjerciciosDiaUno_3.csproj", "{ACD8074B-C8D0-4539-B955-786F56B92DC4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logica", "Logica", "{31900FDD-8EE9-446D-AB4B-D93A585C78D8}"
 	ProjectSection(SolutionItems) = preProject
 		EjerciciosDiaUno.cs = EjerciciosDiaUno.cs
@@ -18,20 +12,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7FD1328-3E2B-4E1A-8945-0FD812C58A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7FD1328-3E2B-4E1A-8945-0FD812C58A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7FD1328-3E2B-4E1A-8945-0FD812C58A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7FD1328-3E2B-4E1A-8945-0FD812C58A15}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D06BFAF7-D9DB-4244-992E-5745679419DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D06BFAF7-D9DB-4244-992E-5745679419DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D06BFAF7-D9DB-4244-992E-5745679419DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D06BFAF7-D9DB-4244-992E-5745679419DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACD8074B-C8D0-4539-B955-786F56B92DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACD8074B-C8D0-4539-B955-786F56B92DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACD8074B-C8D0-4539-B955-786F56B92DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACD8074B-C8D0-4539-B955-786F56B92DC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
