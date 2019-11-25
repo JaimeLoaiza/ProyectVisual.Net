@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosDiaUno_2", "Ejerc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjerciciosDiaUno_3", "EjercicioDiaUno_3\EjerciciosDiaUno_3.csproj", "{ACD8074B-C8D0-4539-B955-786F56B92DC4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logica", "Logica", "{31900FDD-8EE9-446D-AB4B-D93A585C78D8}"
+	ProjectSection(SolutionItems) = preProject
+		EjerciciosDiaUno.cs = EjerciciosDiaUno.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
