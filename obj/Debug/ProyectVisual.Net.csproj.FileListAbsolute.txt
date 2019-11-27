@@ -1,9 +1,0 @@
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\bin\Debug\ProyectVisual.Net.exe.config
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\bin\Debug\ProyectVisual.Net.exe
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\bin\Debug\ProyectVisual.Net.pdb
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.csprojAssemblyReference.cache
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.Properties.Resources.resources
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.csproj.GenerateResource.cache
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.exe
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.pdb
-C:\Users\Familia Loaiza\source\repos\Git Repo\ProyectVisual.Net\obj\Debug\ProyectVisual.Net.Form1.resources
