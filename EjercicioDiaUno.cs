@@ -45,8 +45,7 @@ namespace EjerciciosProyect_Visual.Net
 
             cifra = ejercicioDia.CalcularUltimoDigito(cifra);
 
-            Console.WriteLine("El Número digitado es Negativo" + "; " + "Su ültimo digito es: " + (cifra % 10));
-            Console.WriteLine("La última cifra del Número digitado es: " + (cifra % 10));
+            Console.WriteLine("El Número digitado es Negativo" + "; " + "Su ültimo digito es: " + cifra);
 
             Console.ReadKey();
         }
@@ -85,14 +84,16 @@ namespace EjerciciosProyect_Visual.Net
 
         public int CalcularUltimoDigito(int cifra)
         {
-            if (cifra < 0)
-                _ = (cifra % 10);
-            else if (cifra >= 0)
-                _ = (cifra % 10);
-            else
-                cifra = cifra;
+            int ultimoDigito;
 
-            return cifra;
+            if (cifra < 0)
+                ultimoDigito = (cifra % 10);
+            else if (cifra >= 0)
+                ultimoDigito = (cifra % 10);
+            else
+                ultimoDigito = cifra;
+
+            return ultimoDigito;
         }
 
         public double ConvertirCentimetrosAPulgadas(int centimetros)
