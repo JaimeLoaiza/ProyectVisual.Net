@@ -8,6 +8,7 @@ namespace EjerciciosProyect_Visual.Net
 {
     class EjercicioDiaUno
     {
+        EjercicioDiaUno ejercicioDia;
         public static void Main(string[] args)
         {
             EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
@@ -28,11 +29,8 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Digite el Tercer Número: ");
             int numero3 = int.Parse(Console.ReadLine());
 
-            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
-
             resultado = ejercicioDia.CalcularResultado(numero1, numero2);
             Console.WriteLine("La Suma es: " + resultado);
-            Convert.ToString(resultado, null);
 
             resultado = ejercicioDia.CalcularResultado(numero1, numero2, numero3);
             Console.WriteLine("La Multiplicación es: " + resultado);
@@ -45,13 +43,10 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Digite un Número: ");
             int cifra = int.Parse(Console.ReadLine());
 
-            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
             cifra = ejercicioDia.CalcularUltimoDigito(cifra);
 
-            if (cifra < 0)
-                Console.WriteLine("El Número digitado es Negativo" + "; " + "Su ültimo digito es: " + (cifra % 10));
-            else if (cifra >= 0)
-                Console.WriteLine("La última cifra del Número digitado es: " + (cifra % 10));
+            Console.WriteLine("El Número digitado es Negativo" + "; " + "Su ültimo digito es: " + (cifra % 10));
+            Console.WriteLine("La última cifra del Número digitado es: " + (cifra % 10));
 
             Console.ReadKey();
         }
@@ -64,7 +59,6 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Ingrese el Valor en centimetros (cm) que desea convertir: ");
             centimetros = int.Parse(Console.ReadLine());
 
-            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
             pulgadas = ejercicioDia.ConvertirCentimetrosAPulgadas(centimetros);
 
             Console.WriteLine("{0} centimetros: {1} pulgadas", centimetros, pulgadas);
@@ -91,6 +85,13 @@ namespace EjerciciosProyect_Visual.Net
 
         public int CalcularUltimoDigito(int cifra)
         {
+            if (cifra < 0)
+                _ = (cifra % 10);
+            else if (cifra >= 0)
+                _ = (cifra % 10);
+            else
+                cifra = cifra;
+
             return cifra;
         }
 
