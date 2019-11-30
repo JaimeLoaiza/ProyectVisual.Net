@@ -29,6 +29,8 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Digite el Tercer Número: ");
             int numero3 = int.Parse(Console.ReadLine());
 
+            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
+
             resultado = ejercicioDia.CalcularResultado(numero1, numero2);
             Console.WriteLine("La Suma es: " + resultado);
 
@@ -43,9 +45,11 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Digite un Número: ");
             int cifra = int.Parse(Console.ReadLine());
 
+            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
+
             cifra = ejercicioDia.CalcularUltimoDigito(cifra);
 
-            Console.WriteLine("El Número digitado es Negativo" + "; " + "Su ültimo digito es: " + cifra);
+            Console.WriteLine("Su ültimo digito es: " + cifra);
 
             Console.ReadKey();
         }
@@ -57,6 +61,8 @@ namespace EjerciciosProyect_Visual.Net
 
             Console.WriteLine("Ingrese el Valor en centimetros (cm) que desea convertir: ");
             centimetros = int.Parse(Console.ReadLine());
+
+            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
 
             pulgadas = ejercicioDia.ConvertirCentimetrosAPulgadas(centimetros);
 
@@ -86,12 +92,7 @@ namespace EjerciciosProyect_Visual.Net
         {
             int ultimoDigito;
 
-            if (cifra < 0)
-                ultimoDigito = (cifra % 10);
-            else if (cifra >= 0)
-                ultimoDigito = (cifra % 10);
-            else
-                ultimoDigito = cifra;
+            ultimoDigito = (cifra % 10);
 
             return ultimoDigito;
         }
