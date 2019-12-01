@@ -8,10 +8,10 @@ namespace EjerciciosProyect_Visual.Net
 {
     class EjercicioDiaUno
     {
-        EjercicioDiaUno ejercicioDia;
+        static EjercicioDiaUno ejercicioDia;
         public static void Main(string[] args)
         {
-            EjercicioDiaUno ejercicioDia = new EjercicioDiaUno();
+            ejercicioDia = new EjercicioDiaUno();
 
             ejercicioDia.llamarEjercicioUno();
             ejercicioDia.llamarEjercicioDos();
