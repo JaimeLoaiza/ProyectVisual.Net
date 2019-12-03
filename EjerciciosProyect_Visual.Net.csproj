@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EjercicioDiaDos.cs" />
+    <Compile Include="EjercicioDiaTres.cs" />
     <Compile Include="EjercicioDiaUno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -17,7 +17,6 @@ namespace EjerciciosProyect_Visual.Net
             ejercicioDia.llamarEjercicioDos();
             ejercicioDia.llamarEjercicioTres();
         }
-
         public void llamarEjercicioUno()
         {
             string resultado;
