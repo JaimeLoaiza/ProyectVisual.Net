@@ -8,10 +8,10 @@ namespace EjerciciosProyect_Visual.Net
 {
     class EjercicioDiaDos
     {
-        EjercicioDiaDos ejercicioDia;
+        static EjercicioDiaDos ejercicioDia;
         public static void Main(string[] args)
         {
-            EjercicioDiaDos ejercicioDia = new EjercicioDiaDos();
+            ejercicioDia = new EjercicioDiaDos();
 
             ejercicioDia.llamarEjercicioUno();
             ejercicioDia.llamarEjercicioDos();
@@ -26,8 +26,6 @@ namespace EjerciciosProyect_Visual.Net
             Console.WriteLine("Digite un Número para hallar el Área: ");
             ladodelcuadrado = int.Parse(Console.ReadLine());
 
-            EjercicioDiaDos ejercicioDia = new EjercicioDiaDos();
-
             areacuadrado = ejercicioDia.CalcularAreaCuadrado(ladodelcuadrado);
 
             Console.WriteLine("El Área del Cuadrado es: " + areacuadrado);
@@ -37,52 +35,39 @@ namespace EjerciciosProyect_Visual.Net
         public void llamarEjercicioDos()
         {
             Console.WriteLine("Digite un Número: ");
-            int numero = int.Parse(Console.ReadLine());
+            int numero = Convert.ToInt32(Console.ReadLine());
 
-            EjercicioDiaDos ejercicioDia = new EjercicioDiaDos();
+            string determinenumero = ejercicioDia.DeterminarNumero(numero);
 
-            numero = ejercicioDia.DeterminarNumero(numero);
-
-                Console.WriteLine("Número es Negativo" + (numero < 0));
-                Console.WriteLine("Número es Positivo" + (numero >= 0));
+            if (numero >= 0)
+                Console.WriteLine("Número es Positivo");
+            else
+                Console.WriteLine("Número es Negativo");
 
             Console.ReadKey();
         }
 
         public void llamarEjercicioTres()
         {
+            string numerodivisible;
+
             Console.WriteLine("Entre un Número");
-            int numero = Int32.Parse(Console.ReadLine());
+            int multiplo = int.Parse(Console.ReadLine());
 
-            EjercicioDiaDos ejercicioDia = new EjercicioDiaDos();
+            numerodivisible = ejercicioDia.CalculoDeMultiplos(multiplo);
 
-            numero = Int32.Parse(ejercicioDia.CalculoDeMultiplos(numero));
-
-            Boolean numeroEsDivisible = false;
-            if (numero % 2 == 0)
-            {
-                Console.WriteLine("Número Divisible por 2");
-                numeroEsDivisible = true;
-            }
-            else if (numero % 3 == 0)
-            {
-                Console.WriteLine("Número Divisible por 3");
-                numeroEsDivisible = true;
-            }
-            if (numero % 2 == 0 && numero % 3 == 0)
-            {
+            if (multiplo % 2 == 0 && multiplo % 3 == 0)
                 Console.WriteLine("Número Divisible por ambos");
-                numeroEsDivisible = true;
-            }
-            else if (numero % 1 == 0 || numero % 2 == 0 || numero % 3 == 0)
-            {
+            if (multiplo % 2 == 0)
+                Console.WriteLine("Número Divisible por 2");
+            if (multiplo % 3 == 0)
+                Console.WriteLine("Número Divisible por 3");
+            else if (multiplo % 1 == 0 || multiplo % 2 == 0 || multiplo % 3 == 0)
                 Console.WriteLine("Número No Divisible por 2 ó 3");
-                numeroEsDivisible = true;
-            }
+
             Console.WriteLine("Enter para Cerrar");
             Console.ReadKey();
         }
-
         public int CalcularAreaCuadrado(int ladodelcuadrado)
         {
             int areacuadrado;
@@ -91,39 +76,42 @@ namespace EjerciciosProyect_Visual.Net
             return areacuadrado;
         }
 
-        public int DeterminarNumero(int numero)
+        public string DeterminarNumero(int numero)
         {
             int determinenumero;
 
-            if (numero < 0);
+            if (numero >= 0)
+            {
                 determinenumero = numero;
-
-            if (numero >= 0);
+            }
+            else
+            {
                 determinenumero = numero;
-
-            return determinenumero;
-        }
-
-        public string CalculoDeMultiplos(Int32 numero)
-        {
-            Boolean numeroEsDivisible = false;
-            if (numero % 2 == 0)
-            {
-                numeroEsDivisible = true;
-            }
-            else if (numero % 3 == 0)
-            {
-                numeroEsDivisible = true;
-            }
-            if (numero % 2 == 0 && numero % 3 == 0)
-            {
-                numeroEsDivisible = true;
-            }
-            else if (numero % 1 == 0 || numero % 2 == 0 || numero % 3 == 0)
-            {
-                numeroEsDivisible = true;
             }
             return numero.ToString();
+        }
+
+        public string CalculoDeMultiplos(int multiplo)
+        {
+            int numerodivisible;
+
+            if (multiplo % 2 == 0 && multiplo % 3 == 0)
+            {
+                multiplo = 2 & 3;
+            }
+            if (multiplo % 2 == 0)
+            {
+                multiplo = 2;
+            }
+            if (multiplo % 3 == 0)
+            {
+                multiplo = 3;
+            }
+            else if (multiplo % 1 == 0 || multiplo % 2 == 0 || multiplo % 3 == 0)
+            {
+                multiplo = 1 | 2 | 3;
+            }
+            return multiplo.ToString();
         }
     }
 }
