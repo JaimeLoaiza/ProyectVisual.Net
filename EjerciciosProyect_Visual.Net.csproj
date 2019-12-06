@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EjerciciosProyect_Visual.Net.EjercicioDiaUno</StartupObject>
+    <StartupObject>EjerciciosProyect_Visual.Net.EjercicioDiaTres</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EjercicioDiaDos.cs" />
+    <Compile Include="EjercicioDiaTres.cs" />
     <Compile Include="EjercicioDiaUno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
