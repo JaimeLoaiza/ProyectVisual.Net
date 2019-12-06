@@ -62,7 +62,6 @@ namespace EjerciciosProyect_Visual.Net
             {
                 return "negativo";
             }
-            return numero.ToString();
         }
         public string CalculoDeMultiplos(int multiplo)
         {
@@ -83,7 +82,6 @@ namespace EjerciciosProyect_Visual.Net
             {
                 return " No es divisible por 2 o 3";
             }
-            return multiplo.ToString();
         }
     }
 }

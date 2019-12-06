@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EjerciciosProyect_Visual.Net.EjercicioDiaDos</StartupObject>
+    <StartupObject>EjerciciosProyect_Visual.Net.EjercicioDiaTres</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
