@@ -28,25 +28,20 @@ namespace EjerciciosProyect_Visual.Net
         }
         public void llamarEjercicioDos()
         {
-            int numero;
             string determinenumero;
             Console.WriteLine("Digite un Número para hallar su Estado: ");
-            numero = int.Parse(Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
             determinenumero = ejercicioDia.DeterminarNumero(numero);
-            Console.WriteLine("El Número Digitado es: " + determinenumero);
             Console.WriteLine("El Número Digitado es: " + determinenumero);
             Console.ReadKey();
         }
         public void llamarEjercicioTres()
         {
             string numerodivisible;
-            Console.WriteLine("Entre un Número");
-            int multiplo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entre el Número: ");
+            int multiplo = Int32.Parse(Console.ReadLine());
             numerodivisible = ejercicioDia.CalculoDeMultiplos(multiplo);
-                Console.WriteLine(numerodivisible);
-                Console.WriteLine(numerodivisible);
-                Console.WriteLine(numerodivisible);
-                Console.WriteLine(numerodivisible);
+            Console.WriteLine("El Número " + multiplo + numerodivisible);
             Console.WriteLine("Enter para Cerrar");
             Console.ReadKey();
         }
@@ -59,34 +54,34 @@ namespace EjerciciosProyect_Visual.Net
         public string DeterminarNumero(int numero) 
         {
             int determinenumero;
-            if (numero >= 0)
+            if (numero > 0)
             {
-                determinenumero = numero;
+                return "positivo";
             }
             else
             {
-                determinenumero = numero;
+                return "negativo";
             }
             return numero.ToString();
         }
         public string CalculoDeMultiplos(int multiplo)
         {
-            int numerodivisible;
+            string numerodivisible;
             if (multiplo % 2 == 0 && multiplo % 3 == 0)
             {
-                multiplo = 2 & 3;
+                return " es divisible por ambos";
             }
-            if (multiplo % 3 == 0)
+            else if (multiplo % 3 == 0)
             {
-                multiplo = 3;
+                return " es divisible por 3";
             }
-            if (multiplo % 2 == 0)
+            else if (multiplo % 2 == 0)
             {
-                multiplo = 2;
+                return " es divisible por 2";
             }
-            else if (multiplo % 1 == 0 || multiplo % 2 == 0 || multiplo % 3 == 0)
+            else
             {
-                multiplo = 1 | 2 | 3;
+                return " No es divisible por 2 o 3";
             }
             return multiplo.ToString();
         }
