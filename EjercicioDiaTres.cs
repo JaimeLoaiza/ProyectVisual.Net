@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EjerciciosProyect_Visual.Net
 {
-    class EjercicioDiaTres
+    public class EjercicioDiaTres
     {
-        static EjercicioDiaTres ejercicioDia;
+        public static EjercicioDiaTres ejercicioDia;
         public static void Main(string[] args)
         {
             ejercicioDia = new EjercicioDiaTres();
@@ -20,149 +20,93 @@ namespace EjerciciosProyect_Visual.Net
         {
             int resultado;
             Console.WriteLine("Ingresa el Primer número: ");
-            int numero1 = int.Parse(Console.ReadLine());
+            int numeroUno = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingresa el Segundo número: ");
-            int numero2 = int.Parse(Console.ReadLine());
+            int numeroDos = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingresa el Tercer número: ");
-            int numero3 = int.Parse(Console.ReadLine());
-            resultado = ejercicioDia.CalcularNumeroMayor(numero1, numero2, numero3);
+            int numeroTres = int.Parse(Console.ReadLine());
+            resultado = ejercicioDia.CalcularNumeroMayor(numeroUno, numeroDos, numeroTres);
             Console.WriteLine("El Número Mayor de ellos es: " + resultado);
             Console.ReadKey();
         }
         public void llamarEjercicioDos()
         {
-            string nombredelmes;
+            string nombreDelMes;
             Console.WriteLine("Digita un número del 1 al 12: ");
             int numero = Convert.ToInt32(Console.ReadLine());
-            nombredelmes = ejercicioDia.DeterminarElMes(numero);
-            Console.WriteLine("El Número Digitado " + numero + " corresponde al Mes de: " + nombredelmes);
+            nombreDelMes = ejercicioDia.DeterminarElMes(numero);
+            Console.WriteLine("El Número Digitado " + numero + " corresponde al Mes de: " + nombreDelMes);
             Console.ReadKey();
         }
         public void llamarEjercicioTres()
         {
-            string numerosimpares;
+            string numerosImpares;
             Console.WriteLine("Ingrese un Número Positivo: ");
             int numero = Convert.ToInt32(Console.ReadLine());
-            numerosimpares = ejercicioDia.MostrarNumerosImpares(numero);
-            Console.WriteLine("El Orden descendente al número " + numero + " es: " + numerosimpares);
+            numerosImpares = ejercicioDia.MostrarNumerosImpares(numero);
+            Console.WriteLine("El Orden descendente al número " + numero + " es: " + numerosImpares);
             Console.ReadKey();
         }
-        public int CalcularNumeroMayor(int numero1, int numero2, int numero3)
+        public int CalcularNumeroMayor(int numeroUno, int numeroDos, int numeroTres)
         {
             int resultado;
-            if (numero1 >= numero2 && numero1 > numero3)
+            if (numeroUno >= numeroDos && numeroUno > numeroTres)
             {
-                resultado = numero1;
+                resultado = numeroUno;
             }
-            else if (numero2 >= numero1 && numero2 > numero3)
+            else if (numeroDos >= numeroUno && numeroDos > numeroTres)
             {
-                resultado = numero2;
+                resultado = numeroDos;
             }
             else
             {
-                resultado = numero3;
+                resultado = numeroTres;
             }
             return resultado;
         }
         public string DeterminarElMes(int numero)
         {
-            if (numero == 1)
+            switch(numero)
             {
-                return "Enero";
-            }
-            else
-            {
-                if (numero == 2)
-                {
-                    return "Febrero";
-                }
-                else
-                {
-                    if (numero == 3)
-                    {
-                        return "Marzo";
-                    }
-                    else
-                    {
-                        if (numero == 4)
-                        {
-                            return "Abril";
-                        }
-                        else
-                        {
-                            if (numero == 5)
-                            {
-                                return "Mayo";
-                            }
-                            else
-                            {
-                                if (numero == 6)
-                                {
-                                    return "Junio";
-                                }
-                                else
-                                {
-                                    if (numero == 7)
-                                    {
-                                        return "Julio";
-                                    }
-                                    else
-                                    {
-                                        if (numero == 8)
-                                        {
-                                            return "Agosto";
-                                        }
-                                        else
-                                        {
-                                            if (numero == 9)
-                                            {
-                                                return "Septiembre";
-                                            }
-                                            else
-                                            {
-                                                if (numero == 10)
-                                                {
-                                                    return "Octubre";
-                                                }
-                                                else
-                                                {
-                                                    if (numero == 11)
-                                                    {
-                                                        return "Noviembre";
-                                                    }
-                                                    else
-                                                    {
-                                                        if (numero == 12)
-                                                        {
-                                                            return "Diciembre";
-                                                        }
-                                                        else
-                                                        {
-                                                            return "Número No perteneciente al Calendario";
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                case 1:
+                    return ("Enero");
+                case 2:
+                    return ("Febrero");
+                case 3:
+                    return ("Marzo");
+                case 4:
+                    return ("Abril");
+                case 5:
+                    return ("Mayo");
+                case 6:
+                    return ("Junio");
+                case 7:
+                    return ("Julio");
+                case 8:
+                    return ("Agosto");
+                case 9:
+                    return ("Septiembre");
+                case 10:
+                    return ("Octubre");
+                case 11:
+                    return ("Noviembre");
+                case 12:
+                    return ("Diciembre");
+                default:
+                    return ("Número No perteneciente al Calendario");
             }
         }
         public string MostrarNumerosImpares(int numero)
         {
-            string numerosimpares = "";
+            string numerosImpares = "";
             for (int i = numero; i >= 0; i--)
             {
                 if (i % 2 != 0)
                 {
-                   numerosimpares += (i.ToString() + ", ");
+                    numerosImpares += (i.ToString() + ", ");
                 }
             }
-            return numerosimpares;
+            return numerosImpares;
         }
     }
 }
