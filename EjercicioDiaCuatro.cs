@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Globalization;
+using System.Windows;
 
 namespace EjerciciosProyecto_Visual.Net
 {
@@ -21,14 +21,9 @@ namespace EjerciciosProyecto_Visual.Net
         }
         public void llamarEjercicioUno()
         {
-            double PromedioDefinitivo;
-            Console.WriteLine("Nota Número Uno: ");
-            double notaUno = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Nota Número Dos: ");
-            double notaDos = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Nota Número Tres: ");
-            double notaTres = Double.Parse(Console.ReadLine());
-            PromedioDefinitivo = ejercicioDia.PromedioAcademico(notaUno, notaDos, notaTres);
+            double nota = 0;
+            notas.Add(nota);
+            double PromedioDefinitivo = ejercicioDia.PromedioAcademico(nota);
             Console.WriteLine("El Promedio Definitivo es: " + PromedioDefinitivo);
             Console.ReadKey();
         }
@@ -58,18 +53,23 @@ namespace EjerciciosProyecto_Visual.Net
             numeros = ejercicioDia.ListaDeEnteros(numero);
             Console.WriteLine("La Colección de Números es: " + numeros);
         }
-        public double PromedioAcademico(double notaUno, double notaDos, double notaTres)
+        public double PromedioAcademico()
         {
-            double notas;
-            double PromedioDefinitivo = (notaUno + notaDos + notaTres) / 3;
-            for (notas = 0; notas <= 3; notas++)
+            List<double> notas = new List<double>();
+            double suma = 0;
+            foreach (double nota in notas)
             {
-                if (notaUno < 1.0 || notaDos < 1.0 || notaTres < 1.0 || notaUno > 5.0 || notaDos > 5.0 || notaTres > 5.0)
-                {
-                    Console.WriteLine("El número ingresado es Invalido, Intente Nuevamente");
-                }
+                suma += nota;
             }
-            return PromedioDefinitivo;
+            double PromedioDefinitivo = suma / notas.Count;
+            if (notas != null)
+            {
+                return PromedioDefinitivo;
+            }
+            else
+            {
+                MessageBox.Show("el numero ingresado es inválido, intente nuevamente");
+            }
         }
         public int SumaTotalDeImpares(int numero)
         {
