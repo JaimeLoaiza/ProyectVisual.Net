@@ -21,8 +21,9 @@ namespace EjerciciosProyecto_Visual.Net
         }
         public void llamarEjercicioUno()
         {
-            double nota = 0;
-            notas.Add(nota);
+            string i = null;
+            Console.WriteLine("Digite Nota:" + i);
+            double nota = Convert.ToDouble(Console.ReadLine());
             double PromedioDefinitivo = ejercicioDia.PromedioAcademico(nota);
             Console.WriteLine("El Promedio Definitivo es: " + PromedioDefinitivo);
             Console.ReadKey();
@@ -53,23 +54,20 @@ namespace EjerciciosProyecto_Visual.Net
             numeros = ejercicioDia.ListaDeEnteros(numero);
             Console.WriteLine("La Colección de Números es: " + numeros);
         }
-        public double PromedioAcademico()
+        public double PromedioAcademico(double nota)
         {
-            List<double> notas = new List<double>();
             double suma = 0;
-            foreach (double nota in notas)
+            for (int i = 1; i <= 3; i++)
             {
-                suma += nota;
+                suma = suma + nota;
+                if (nota < 5.0)
+                {
+                    MessageBox.Show("el numero ingresado es inválido, intente nuevamente");
+                }
             }
-            double PromedioDefinitivo = suma / notas.Count;
-            if (notas != null)
-            {
-                return PromedioDefinitivo;
-            }
-            else
-            {
-                MessageBox.Show("el numero ingresado es inválido, intente nuevamente");
-            }
+            double PromedioDefinitivo;
+            PromedioDefinitivo = suma / 3;
+            return PromedioDefinitivo;
         }
         public int SumaTotalDeImpares(int numero)
         {
@@ -100,7 +98,7 @@ namespace EjerciciosProyecto_Visual.Net
                 numero = Int32.Parse(Console.ReadLine());
                 numeros.Add(numero);
             }
-            Console.WriteLine("¿Desea Ingresar un nuevo número o no? (0 para mostrar la lista)");
+            Console.WriteLine("¿Desea Ingresar un nuevo número o no? (0 para mostrar la lista?");
             foreach(int digitonumerico in numeros)
             {
                 Console.WriteLine(digitonumerico);
