@@ -21,10 +21,13 @@ namespace EjerciciosProyecto_Visual.Net
         }
         public void llamarEjercicioUno()
         {
-            string i = null;
-            Console.WriteLine("Digite Nota:" + i);
-            double nota = Convert.ToDouble(Console.ReadLine());
-            double PromedioDefinitivo = ejercicioDia.PromedioAcademico(nota);
+            Console.WriteLine("Digite Nota1: ");
+            double nota1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite Nota2: ");
+            double nota2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite Nota3: ");
+            double nota3 = double.Parse(Console.ReadLine());
+            double PromedioDefinitivo = ejercicioDia.PromedioAcademico(nota1, nota2, nota3);
             Console.WriteLine("El Promedio Definitivo es: " + PromedioDefinitivo);
             Console.ReadKey();
         }
@@ -41,7 +44,7 @@ namespace EjerciciosProyecto_Visual.Net
         {
             string fecha;
             Console.WriteLine("Digite un Número de 0 a 365: ");
-            int numero = Int32.Parse(Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
             fecha = ejercicioDia.CalculoDeFecha(numero);
             Console.WriteLine("El Número Ingresado, corresponde al: " + fecha);
             Console.ReadKey();
@@ -54,26 +57,15 @@ namespace EjerciciosProyecto_Visual.Net
             numeros = ejercicioDia.ListaDeEnteros(numero);
             Console.WriteLine("La Colección de Números es: " + numeros);
         }
-        public double PromedioAcademico(double nota)
+        public double PromedioAcademico(double nota1, double nota2, double nota3)
         {
-            double suma = 0;
-            for (int i = 1; i <= 3; i++)
-            {
-                suma = suma + nota;
-                if (nota < 5.0)
-                {
-                    MessageBox.Show("el numero ingresado es inválido, intente nuevamente");
-                }
-            }
-            double PromedioDefinitivo;
-            PromedioDefinitivo = suma / 3;
+            double suma = nota1 + nota2 + nota3;
+            double PromedioDefinitivo = (suma)/30;
             return PromedioDefinitivo;
         }
         public int SumaTotalDeImpares(int numero)
         {
-            int sumaTotal;
             int suma = 0;
-            int impares = 0;
             for (int i = 0; i <= numero; i++)
             {
                 if (numero > 0 && i % 2 != 0)
