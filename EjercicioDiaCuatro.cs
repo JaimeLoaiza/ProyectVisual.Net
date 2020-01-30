@@ -22,11 +22,11 @@ namespace EjerciciosProyecto_Visual.Net
         public void llamarEjercicioUno()
         {
             Console.WriteLine("Digite Nota1: ");
-            double nota1 = double.Parse(Console.ReadLine());
+            double nota1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Digite Nota2: ");
-            double nota2 = double.Parse(Console.ReadLine());
+            double nota2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Digite Nota3: ");
-            double nota3 = double.Parse(Console.ReadLine());
+            double nota3 = Convert.ToDouble(Console.ReadLine());
             double PromedioDefinitivo = ejercicioDia.PromedioAcademico(nota1, nota2, nota3);
             Console.WriteLine("El Promedio Definitivo es: " + PromedioDefinitivo);
             Console.ReadKey();
@@ -56,11 +56,20 @@ namespace EjerciciosProyecto_Visual.Net
             int numero = Int32.Parse(Console.ReadLine());
             numeros = ejercicioDia.ListaDeEnteros(numero);
             Console.WriteLine("La Colección de Números es: " + numeros);
+            Console.ReadKey();
         }
-        public double PromedioAcademico(double nota1, double nota2, double nota3)
+        public double PromedioAcademico(double nota1, double nota2, double nota3, double PromedioDefinitivo)
         {
-            double suma = nota1 + nota2 + nota3;
-            double PromedioDefinitivo = (suma)/30;
+            double suma;
+            suma = nota1 + nota2 + nota3;
+            if (nota1 > 5 || nota2 > 5 || nota3 > 5)
+            {
+                MessageBox.Show ("EL NÚMERO INGRESADO ES INVÁLIDO, INTENTE NUEVAMENTE");
+            }
+            else
+            {
+                PromedioDefinitivo = (suma) / 30;
+            }
             return PromedioDefinitivo;
         }
         public int SumaTotalDeImpares(int numero)
