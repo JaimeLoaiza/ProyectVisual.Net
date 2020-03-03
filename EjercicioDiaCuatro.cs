@@ -33,11 +33,11 @@ namespace EjerciciosProyecto_Visual.Net
         }
         public void llamarEjercicioDos()
         {
-            int sumaTotal;
+            int sumaImpares;
             Console.WriteLine("Ingrese un Número Positivo: ");
             int numero = int.Parse(Console.ReadLine());
-            sumaTotal = ejercicioDia.SumaTotalDeImpares(numero);
-            Console.WriteLine("La Suma Total de los Números impares del número " + numero + ", " + " desde 0 es: " + sumaTotal);
+            sumaImpares = ejercicioDia.SumaTotalDeImpares(numero);
+            Console.WriteLine("La Suma Total de los Números impares del número " + numero + ", " + " desde 0 es: " + sumaImpares);
             Console.ReadKey();
         }
         public void llamarEjercicioTres()
@@ -58,11 +58,12 @@ namespace EjerciciosProyecto_Visual.Net
             Console.WriteLine("La Colección de Números es: " + numeros);
             Console.ReadKey();
         }
-        public double PromedioAcademico(double nota1, double nota2, double nota3, double PromedioDefinitivo)
+        public double PromedioAcademico(double nota1, double nota2, double nota3)
         {
+            double PromedioDefinitivo = 0;
             double suma;
             suma = nota1 + nota2 + nota3;
-            if (nota1 > 5 || nota2 > 5 || nota3 > 5)
+            if (nota1 > 5)
             {
                 MessageBox.Show ("EL NÚMERO INGRESADO ES INVÁLIDO, INTENTE NUEVAMENTE");
             }
@@ -74,15 +75,15 @@ namespace EjerciciosProyecto_Visual.Net
         }
         public int SumaTotalDeImpares(int numero)
         {
-            int suma = 0;
-            for (int i = 0; i <= numero; i++)
+            int sumaImpares = 0;
+            for (int i = numero; i >= 0; i++)
             {
-                if (numero > 0 && i % 2 != 0)
+                if (numero % 2 == 0)
                 {
-                    suma = (i);
+                    sumaImpares += i;
                 }
             }
-            return numero;
+            return sumaImpares;
         }
         public string CalculoDeFecha(int numero)
         {
