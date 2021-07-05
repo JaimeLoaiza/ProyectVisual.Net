@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EjerciciosProyect_Visual.Net
 {
-    class EjercicioDiaDos
+    public class EjercicioDiaDos
     {
-        static EjercicioDiaDos ejercicioDia;
+        public static EjercicioDiaDos ejercicioDia;
         public static void Main(string[] args)
         {
             ejercicioDia = new EjercicioDiaDos();
@@ -53,7 +53,6 @@ namespace EjerciciosProyect_Visual.Net
         }
         public string DeterminarNumero(int numero) 
         {
-            int determinenumero;
             if (numero > 0)
             {
                 return "positivo";
@@ -65,7 +64,6 @@ namespace EjerciciosProyect_Visual.Net
         }
         public string CalculoDeMultiplos(int multiplo)
         {
-            string numerodivisible;
             if (multiplo % 2 == 0 && multiplo % 3 == 0)
             {
                 return " es divisible por ambos";

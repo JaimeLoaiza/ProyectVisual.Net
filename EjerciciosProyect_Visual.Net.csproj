@@ -33,9 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EjerciciosProyect_Visual.Net.EjercicioDiaTres</StartupObject>
+    <StartupObject>EjerciciosProyecto_Visual.Net.EjercicioDiaCuatro</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EjercicioDiaCuatro.cs" />
     <Compile Include="EjercicioDiaDos.cs" />
     <Compile Include="EjercicioDiaTres.cs" />
     <Compile Include="EjercicioDiaUno.cs" />
